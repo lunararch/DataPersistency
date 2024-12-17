@@ -1,0 +1,49 @@
+{
+  "zipcode": "2020",
+  "coord": {
+    "lon": 51.183,
+    "lat": 4.41848
+  },
+  "weather": [
+    {
+      "id": 300,
+      "main": "Drizzle",
+      "description": "light intensity drizzle",
+      "icon": "09d"
+    },
+    {
+      "id": 500,
+      "main": "Rain",
+      "description": "light rain",
+      "icon": "10d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 285.71,
+    "feels_like": 285.5,
+    "temp_min": 285.11,
+    "temp_max": 286.52,
+    "pressure": 1008,
+    "humidity": 95,
+    "sea_level": 1008,
+    "grnd_level": 1007
+  },
+  "visibility": 8000,
+  "clouds": {
+    "all": 75
+  },
+  "sys": {
+    "type": 2,
+    "id": 2006860,
+    "country": "BE"
+  },
+  "rain": {
+    "1h": 0.25
+  },
+  "dt": 1577045792,
+  "timezone": 7200,
+  "id": 0,
+  "name": "Antwerpen",
+  "cod": 200
+}

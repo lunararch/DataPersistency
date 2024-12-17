@@ -1,0 +1,55 @@
+{
+  "zipcode": "2060",
+  "coord": {
+    "lon": 51.2318,
+    "lat": 4.42699
+  },
+  "weather": [
+    {
+      "id": 300,
+      "main": "Drizzle",
+      "description": "light intensity drizzle",
+      "icon": "09d"
+    },
+    {
+      "id": 500,
+      "main": "Rain",
+      "description": "light rain",
+      "icon": "10d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 285.7,
+    "feels_like": 285.49,
+    "temp_min": 285.11,
+    "temp_max": 286.46,
+    "pressure": 1008,
+    "humidity": 95,
+    "sea_level": 1008,
+    "grnd_level": 1007
+  },
+  "visibility": 8000,
+  "wind": {
+    "speed": 4.12,
+    "deg": 130
+  },
+  "rain": {
+    "1h": 0.33
+  },
+  "clouds": {
+    "all": 75
+  },
+  "dt": 1580936892,
+  "sys": {
+    "type": 2,
+    "id": 2006860,
+    "country": "BE",
+    "sunrise": 1727674896,
+    "sunset": 1727716963
+  },
+  "timezone": 7200,
+  "id": 0,
+  "name": "Antwerpen",
+  "cod": 200
+}

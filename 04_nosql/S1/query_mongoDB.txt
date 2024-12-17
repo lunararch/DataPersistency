@@ -1,0 +1,125 @@
+Alle ritten ophalen
+db.rides.find().pretty().limit(5)
+
+
+Bepaalde periode query
+db.rides.find({
+  starttime: {
+    $gte: "2019-09-22T08:00:00.000+02:00",
+    $lt: "2019-09-22T09:00:00.000+02:00"
+  }
+}).pretty()
+
+
+ritten filteren op vehicleid
+db.rides.find({ vehicleid: 5536 }).pretty()
+
+
+ritten tellen per voertuig
+db.rides.aggregate([
+    { $group: { _id: "$vehicleid", count: { $sum: 1 } } },
+    { $sort: { count: -1 } }
+])
+
+Ritten binnen een specifieke tijdsperiode
+db.rides.aggregate([
+    {
+        $addFields: {
+            starttime: { $dateFromString: { dateString: "$starttime" } }
+        }
+    },
+    {
+        $match: {
+            starttime: { $gte: ISODate("2023-01-01T00:00:00Z"), $lt: ISODate("2023-12-31T23:59:59Z") }
+        }
+    }
+]).pretty()
+
+Ritten met een specifieke start- en eindlocatie
+db.rides.find({
+    startpoint: "(51.1888,4.45039)",
+    endpoint: "(51.2221,4.40467)"
+}).pretty()
+
+De langste ritten op basis van tijdsduur
+db.rides.aggregate([
+    {
+        $addFields: {
+            starttime: { $dateFromString: { dateString: "$starttime" } },
+            endtime: { $dateFromString: { dateString: "$endtime" } }
+        }
+    },
+    {
+        $project: {
+            rideid: 1,
+            vehicleid: 1,
+            duration: { $subtract: ["$endtime", "$starttime"] }
+        }
+    },
+    { $sort: { duration: -1 } },
+    { $limit: 10 }
+])
+
+Het totaal aantal ritten
+db.rides.countDocuments()
+
+Ritten groeperen per dag
+db.rides.aggregate([
+    {
+        $addFields: {
+            starttime: { $dateFromString: { dateString: "$starttime" } }
+        }
+    },
+    {
+        $group: {
+            _id: { $dateToString: { format: "%Y-%m-%d", date: "$starttime" } },
+            count: { $sum: 1 }
+        }
+    },
+    { $sort: { "_id": 1 } }
+])
+
+Gemiddelde ritduur per voertuig
+db.rides.aggregate([
+    {
+        $addFields: {
+            starttime: { $dateFromString: { dateString: "$starttime" } },
+            endtime: { $dateFromString: { dateString: "$endtime" } }
+        }
+    },
+    {
+        $project: {
+            vehicleid: 1,
+            duration: { $subtract: ["$endtime", "$starttime"] }
+        }
+    },
+    {
+        $group: {
+            _id: "$vehicleid",
+            avgDuration: { $avg: "$duration" }
+        }
+    },
+    { $sort: { avgDuration: -1 } }
+])
+
+Ritten met een duur langer dan 30 minuten
+db.rides.aggregate([
+    {
+        $addFields: {
+            starttime: { $dateFromString: { dateString: "$starttime" } },
+            endtime: { $dateFromString: { dateString: "$endtime" } }
+        }
+    },
+    {
+        $project: {
+            rideid: 1,
+            vehicleid: 1,
+            duration: { $subtract: ["$endtime", "$starttime"] }
+        }
+    },
+    {
+        $match: {
+            duration: { $gt: 1800000 }  // 30 minuten in milliseconden
+        }
+    }
+])

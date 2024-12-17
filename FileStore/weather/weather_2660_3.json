@@ -1,0 +1,55 @@
+{
+  "zipcode": "2660",
+  "coord": {
+    "lon": 51.1749,
+    "lat": 4.35996
+  },
+  "weather": [
+    {
+      "id": 781,
+      "main": "Tornado",
+      "description": "tornado",
+      "icon": "50d"
+    },
+    {
+      "id": 601,
+      "main": "Snow",
+      "description": "snow",
+      "icon": "13d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 310.15,
+    "feels_like": 310.15,
+    "temp_min": 310.15,
+    "temp_max": 310.15,
+    "pressure": 1008,
+    "humidity": 20,
+    "sea_level": 1008,
+    "grnd_level": 1007
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 20.0,
+    "deg": 130
+  },
+  "snow": {
+    "1h": 10.0
+  },
+  "clouds": {
+    "all": 100
+  },
+  "dt": 1595608826,
+  "sys": {
+    "type": 2,
+    "id": 2006860,
+    "country": "BE",
+    "sunrise": 1727674896,
+    "sunset": 1727716963
+  },
+  "timezone": 7200,
+  "id": 0,
+  "name": "Hoboken",
+  "cod": 200
+}

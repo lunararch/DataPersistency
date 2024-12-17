@@ -1,0 +1,44 @@
+{
+  "zipcode": "2020",
+  "coord": {
+    "lon": 51.183,
+    "lat": 4.41848
+  },
+  "weather": [
+    {
+      "id": 751,
+      "main": "Sand",
+      "description": "sand",
+      "icon": "50d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 310.15,
+    "feels_like": 313.15,
+    "temp_min": 310.15,
+    "temp_max": 310.15,
+    "pressure": 1008,
+    "humidity": 10,
+    "sea_level": 1008,
+    "grnd_level": 1007
+  },
+  "visibility": 8000,
+  "wind": {
+    "speed": 4.12,
+    "deg": 130
+  },
+  "clouds": {
+    "all": 0
+  },
+  "sys": {
+    "type": 2,
+    "id": 2006860,
+    "country": "BE"
+  },
+  "dt": 1577045792,
+  "timezone": 7200,
+  "id": 0,
+  "name": "Antwerpen",
+  "cod": 200
+}

@@ -1,0 +1,49 @@
+{
+  "zipcode": "2600",
+  "coord": {
+    "lon": 51.1926,
+    "lat": 4.42151
+  },
+  "weather": [
+    {
+      "id": 801,
+      "main": "Clouds",
+      "description": "partly cloudy with a chance of rainbow",
+      "icon": "02d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 285.79,
+    "feels_like": 285.59,
+    "temp_min": 285.15,
+    "temp_max": 286.56,
+    "pressure": 1008,
+    "humidity": 95,
+    "sea_level": 1008,
+    "grnd_level": 1007
+  },
+  "visibility": 8000,
+  "wind": {
+    "speed": 4.12,
+    "deg": 130
+  },
+  "rain": {
+    "1h": 0.32
+  },
+  "clouds": {
+    "all": 50
+  },
+  "dt": 1587845201,
+  "sys": {
+    "type": 2,
+    "id": 2006860,
+    "country": "BE",
+    "sunrise": 1727674891,
+    "sunset": 1727716959
+  },
+  "timezone": 7200,
+  "id": 0,
+  "name": "Berchem",
+  "cod": 200
+}

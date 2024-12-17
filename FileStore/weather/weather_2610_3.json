@@ -1,0 +1,46 @@
+{
+  "zipcode": "2610",
+  "coord": {
+    "lon": 51.1705,
+    "lat": 4.39471
+  },
+  "weather": [
+    {
+      "id": 800,
+      "main": "Clear",
+      "description": "clear sky with occasional rain",
+      "icon": "01d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 298.15,
+    "feels_like": 298.15,
+    "temp_min": 298.15,
+    "temp_max": 298.15,
+    "pressure": 1008,
+    "humidity": 80,
+    "sea_level": 1008,
+    "grnd_level": 1007
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 3.0,
+    "deg": 120
+  },
+  "clouds": {
+    "all": 20
+  },
+  "dt": 1590947279,
+  "sys": {
+    "type": 2,
+    "id": 2006860,
+    "country": "BE",
+    "sunrise": 1727674896,
+    "sunset": 1727716963
+  },
+  "timezone": 7200,
+  "id": 0,
+  "name": "Wilrijk",
+  "cod": 200
+}

@@ -1,0 +1,15 @@
+# IDEs
+.idea/
+.vscode/
+
+# MacOS
+.DS_Store/
+
+/spark-warehouse/
+/sparkSQLDemo.ipynb
+/hadoopinstallation
+/__pycache__
+/output
+/venv
+config.ini
+ConnectionConfig.py
